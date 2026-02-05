@@ -10,23 +10,22 @@
      bg-gradient-to-br from-neutral-950 via-neutral-950/95 to-neutral-900 
      before:absolute before:inset-0 before:bg-[radial-gradient(circle_at_50%_20%,rgba(148,163,184,0.08)_0%,transparent_50%)]
      before:pointer-events-none font-['Arial'] text-neutral-100 overflow-x-hidden">
-  <div class="w-full min-h-screen grid grid-cols-1 lg:grid-cols-[30%_70%] grid-rows-[auto_1fr] 
+  <div name="page" class="w-full min-h-screen grid grid-cols-1 lg:grid-cols-[30%_70%] grid-rows-[auto_1fr] 
      gap-3 p-4 lg:p-0 relative z-10 bg-neutral-950/95 backdrop-blur-sm">
-  <!-- TOPO - Botões agora em preto/branco -->
-  <div class="col-span-1 lg:col-span-2 bg-neutral-900/90 backdrop-blur-xl p-4 lg:p-6 flex flex-col sm:flex-row 
-  justify-between gap-3 border-b border-neutral-700/50 shadow-2xl rounded-xl lg:rounded-none"
+  <!-- TOPO -->
+  <div name="topo" class="col-span-1 lg:col-span-2 bg-neutral-900/90 backdrop-blur-xl p-4 lg:p-6 flex flex-col sm:flex-row 
+  justify-end gap-3 border-b border-neutral-700/50 shadow-2xl rounded-xl lg:rounded-none">
   <!-- NAV com Contato -->  
-<div class="col-span-1 lg:col-span-2 flex justify-center lg:justify-end gap-2 mt-6 mb-6 px-4 lg:px-0">
-  <a href="#sobre" class="px-3 py-2 text-sm lg:text-base text-neutral-400 hover:text-neutral-100 font-medium transition-all rounded-xl hover:bg-neutral-900/50">Sobre</a>
-  <a href="#habilidades" class="px-3 py-2 text-sm lg:text-base text-neutral-400 hover:text-neutral-100 font-medium transition-all rounded-xl hover:bg-neutral-900/50">Skills</a>
-  <a href="#projetos" class="px-3 py-2 text-sm lg:text-base text-neutral-400 hover:text-neutral-100 font-medium transition-all rounded-xl hover:bg-neutral-900/50">Projetos</a>
-  <a href="#contato" class="px- py-2 text-sm lg:text-base text-neutral-400 hover:text-neutral-100 font-semibold transition-all rounded-xl hover:bg-neutral-900/50">Contato</a>
-</div>
-
-</div>
+    <div name="nav" class="col-span-1 lg:col-span-2 flex justify-center lg:justify-end gap-2 mt-6 mb-6 px-4 lg:px-8">
+      <a href="#sobre" class="px-3 py-2 text-sm lg:text-base text-neutral-400 hover:text-neutral-100 font-medium transition-all rounded-xl hover:bg-neutral-900/50">Sobre</a>
+      <a href="#habilidades" class="px-3 py-2 text-sm lg:text-base text-neutral-400 hover:text-neutral-100 font-medium transition-all rounded-xl hover:bg-neutral-900/50">Habilidades</a>
+      <a href="#projetos" class="px-3 py-2 text-sm lg:text-base text-neutral-400 hover:text-neutral-100 font-medium transition-all rounded-xl hover:bg-neutral-900/50">Projetos</a>
+      <a href="#contato" class="px-3 py-2 text-sm lg:text-base text-neutral-400 hover:text-neutral-100 font-semibold transition-all rounded-xl hover:bg-neutral-900/50">Contato</a>
+    </div>
+  </div>
   
   <!-- SIDEBAR -->
-  <div class="bg-neutral-900/80 backdrop-blur-xl p-8 rounded-2xl shadow-2xl border border-neutral-700/50">
+  <div name="sidebar" class="bg-neutral-900/80 backdrop-blur-xl p-8 rounded-2xl shadow-2xl border border-neutral-700/50">
     <div class="w-24 h-24 bg-neutral-50 rounded-full mb-6 flex items-center justify-center shadow-2xl border-4 border-neutral-800">
       <span class="text-2xl font-bold text-neutral-950">SM</span>
     </div>
@@ -37,8 +36,7 @@
       <li>• Algoritmos | Estruturas de Dados</li>
       <li>• Em busca de Estágio em Desenvolvimento</li>
     </ul>
-    <div class="flex gap-3 pt-4 border-t border-neutral-700">
-      
+    <div name="contatos-sidebar" class="flex gap-3 pt-4 border-t border-neutral-700">
       <!-- GITHUB -->
       <a href="https://github.com/seuusuario" target="_blank"
          class="group w-14 h-14 bg-neutral-800/50 hover:bg-neutral-700 rounded-xl
@@ -69,7 +67,7 @@
   </div>
 
   <!-- CONTEÚDO PRINCIPAL -->
-  <div class="shadow-2xl shadow-neutral-900/50 bg-neutral-900/60 backdrop-blur-xl p-12 rounded-3xl border border-neutral-700/50 flex flex-col justify-center gap-8">
+  <div name="conteudo-principal" class="shadow-2xl shadow-neutral-900/50 bg-neutral-900/60 backdrop-blur-xl p-12 rounded-3xl border border-neutral-700/50 flex flex-col justify-center gap-8">
     <div>
       <div class="inline-block bg-neutral-50/90 text-neutral-950 px-6 py-3 rounded-full mb-6 shadow-xl border border-neutral-700">
         <span class="text-sm font-semibold tracking-wider">DESENVOLVEDOR FULLSTACK</span>
@@ -84,7 +82,7 @@
         Estudante UNIRIO em busca de desafios reais.
       </p>
     </div>
-    <div class="flex gap-4 pt-4 border-t border-neutral-700">
+    <div name="botoes-principal" class="flex gap-4 pt-4 border-t border-neutral-700">
       <a href="#projetos" class="scroll-mt-20 group relative overflow-hidden bg-neutral-50 text-neutral-950 
       px-6 py-3 text-base sm:px-10 sm:py-4 sm:text-lg rounded-2xl font-bold text-lg shadow-2xl 
       hover:shadow-neutral-400/50 hover:scale-[1.02] hover:bg-neutral-100 
@@ -113,107 +111,269 @@
   </div>
 </div>
 <!-- SEÇÃO HABILIDADES -->
-<section id="habilidades" class="w-full py-32 bg-neutral-950/80 border-t border-neutral-800 -mt-12 pt-48 relative">
+<section name="secao-habilidades" id="habilidades" class="w-full py-32 bg-neutral-950/80 border-t border-neutral-800 -mt-12 pt-48 relative">
   <div class="max-w-6xl mx-auto px-4">
-    
     <!-- TÍTULO -->
     <div class="text-center mb-24">
       <h2 class="text-4xl lg:text-6xl font-black bg-gradient-to-r from-neutral-50 via-neutral-100 to-neutral-200 bg-clip-text text-transparent">
         Habilidades
       </h2>
-      <p class="text-xl text-neutral-400 mt-6 max-w-2xl mx-auto">
-        Tecnologias e competências técnicas que domino
-      </p>
     </div>
-    
-    <!-- SKILLS GRID -->
+    <div class="mt-16 max-w-4xl mx-auto">
+      <h3 class="text-neutral-300 font-semibold tracking-wide uppercase text-2xl mb-2 pb-2 border-b-2 border-neutral-800 
+  inline-block hover:border-neutral-500/50 transition-all duration-300 hover:scale-105">
+        Hard Skills
+      </h3>
+      <h4 class="text-neutral-400 font-semibold tracking-wide uppercase text-sm pb-8">Tecnologias de conhecimento técnico</h4>
+    </div>
+    <!-- SKILLS TÉCNICAS -->
     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 mb-16">
-      
-      <!-- LINGUAGENS -->
-      <div class="group p-8 rounded-2xl bg-neutral-900/50 backdrop-blur-xl border border-neutral-800 hover:border-neutral-700 hover:bg-neutral-900/80 transition-all duration-300 hover:-translate-y-2">
-        <div class="text-center">
-          <div class="w-20 h-20 bg-gradient-to-br from-yellow-400 to-yellow-500 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-2xl">
-            <span class="text-2xl font-bold text-neutral-900">J</span>
-          </div>
-          <h4 class="text-lg font-bold text-neutral-100 mb-2">Java</h4>
-          <p class="text-neutral-400 text-sm">Spring, OOP</p>
-        </div>
-      </div>
-      
-      <!-- SQL -->
-      <div class="group p-8 rounded-2xl bg-neutral-900/50 backdrop-blur-xl border border-neutral-800 hover:border-neutral-700 hover:bg-neutral-900/80 transition-all duration-300 hover:-translate-y-2">
-        <div class="text-center">
-          <div class="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-700 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-2xl">
-            <span class="text-xl font-bold text-white">SQL</span>
-          </div>
-          <h4 class="text-lg font-bold text-neutral-100 mb-2">PostgreSQL</h4>
-          <p class="text-neutral-400 text-sm">Modelagem, Queries</p>
-        </div>
-      </div>
-      
-      <!-- C++ -->
-      <div class="group p-8 rounded-2xl bg-neutral-900/50 backdrop-blur-xl border border-neutral-800 hover:border-neutral-700 hover:bg-neutral-900/80 transition-all duration-300 hover:-translate-y-2">
-        <div class="text-center">
-          <div class="w-20 h-20 bg-gradient-to-br from-blue-900 to-indigo-900 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-2xl">
-            <span class="text-xl font-bold text-white">C++</span>
-          </div>
-          <h4 class="text-lg font-bold text-neutral-100 mb-2">C++</h4>
-          <p class="text-neutral-400 text-sm">Algoritmos, SO</p>
-        </div>
-      </div>
-      
-      <!-- Git -->
-      <div class="group p-8 rounded-2xl bg-neutral-900/50 backdrop-blur-xl border border-neutral-800 hover:border-neutral-700 hover:bg-neutral-900/80 transition-all duration-300 hover:-translate-y-2">
-        <div class="text-center">
-          <div class="w-20 h-20 bg-gradient-to-br from-slate-700 to-slate-900 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-2xl">
-            <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234..."/>
-            </svg>
-          </div>
-          <h4 class="text-lg font-bold text-neutral-100 mb-2">Git/GitHub</h4>
-          <p class="text-neutral-400 text-sm">Versionamento</p>
-        </div>
-      </div>
-      
-      <!-- Data Structures -->
-      <div class="group p-8 rounded-2xl bg-neutral-900/50 backdrop-blur-xl border border-neutral-800 hover:border-neutral-700 hover:bg-neutral-900/80 transition-all duration-300 hover:-translate-y-2">
-        <div class="text-center">
-          <div class="w-20 h-20 bg-gradient-to-br from-purple-500 to-violet-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-2xl">
-            <span class="text-xl font-bold text-white">📊</span>
-          </div>
-          <h4 class="text-lg font-bold text-neutral-100 mb-2">Estruturas</h4>
-          <p class="text-neutral-400 text-sm">Árvores, Heaps</p>
-        </div>
+      <!-- C++  -->
+<div class="group p-8 rounded-2xl bg-neutral-900/50 backdrop-blur-xl border border-neutral-800 hover:border-neutral-700 hover:bg-neutral-900/80 transition-all duration-300 hover:-translate-y-2">
+  <div class="text-center">
+    <div class="w-20 h-20 bg-gradient-to-br from-blue-950 to-indigo-900 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-2xl group-hover:shadow-indigo-500/30 group-hover:scale-105 transition-all duration-300">
+      <svg
+        class="w-12 h-12 text-white"
+        viewBox="0 0 128 128"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-label="C++"
+        role="img"
+      >
+        <path fill="currentColor" d="M63.443 0c-1.782 0-3.564.39-4.916 1.172L11.594 28.27C8.89 29.828 6.68 33.66 6.68 36.78v54.197c0 1.562.55 3.298 1.441 4.841l-.002.002c.89 1.543 2.123 2.89 3.475 3.672l46.931 27.094c2.703 1.562 7.13 1.562 9.832 0h.002l46.934-27.094c1.352-.78 2.582-2.129 3.473-3.672.89-1.543 1.441-3.28 1.441-4.843V36.779c0-1.557-.55-3.295-1.441-4.838v-.002c-.891-1.545-2.121-2.893-3.473-3.67L68.359 1.173C67.008.39 65.226 0 63.443 0zm.002 26.033c13.465 0 26.02 7.246 32.77 18.91l-16.38 9.479c-3.372-5.836-9.66-9.467-16.39-9.467-10.432 0-18.922 8.49-18.922 18.924S53.013 82.8 63.445 82.8c6.735 0 13.015-3.625 16.395-9.465l16.375 9.477c-6.746 11.662-19.305 18.91-32.77 18.91-20.867 0-37.843-16.977-37.843-37.844s16.976-37.844 37.843-37.844v-.002zM92.881 57.57h4.201v4.207h4.203v4.203h-4.203v4.207h-4.201V65.98h-4.207v-4.203h4.207V57.57zm15.765 0h4.208v4.207h4.203v4.203h-4.203v4.207h-4.208V65.98h-4.205v-4.203h4.205V57.57z"></path>
+      </svg>
+    </div>
+    <h4 class="text-lg font-bold text-neutral-100 mb-2">C++</h4>
+    <p class="text-neutral-400 text-sm">Algoritmos, Eficiência</p>
+  </div>
+</div>
+ <!-- PostgreSQL (leve e profissional) -->
+<div class="group p-8 rounded-2xl bg-neutral-900/50 backdrop-blur-xl border border-neutral-800 hover:border-neutral-700 hover:bg-neutral-900/80 transition-all duration-300 hover:-translate-y-2">
+  <div class="text-center">
+    <div class="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-700 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-2xl group-hover:shadow-blue-400/30 group-hover:scale-105 transition-all duration-300">
+      <!-- Ícone simples (estilo Tabler: stroke, leve) -->
+      <svg
+        class="w-12 h-12 text-white"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.8"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-label="PostgreSQL"
+        role="img"
+      >
+        <!-- database icon -->
+        <ellipse cx="12" cy="5" rx="7" ry="3"></ellipse>
+        <path d="M5 5v6c0 1.7 3.1 3 7 3s7-1.3 7-3V5"></path>
+        <path d="M5 11v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"></path>
+      </svg>
+    </div>
+
+    <h4 class="text-lg font-bold text-neutral-100 mb-2">PostgreSQL</h4>
+    <p class="text-neutral-400 text-sm">Modelagem, Queries</p>
+  </div>
+</div>
+<!-- Java -->
+<div class="group p-8 rounded-2xl bg-neutral-900/50 backdrop-blur-xl border border-neutral-800 hover:border-neutral-700 hover:bg-neutral-900/80 transition-all duration-300 hover:-translate-y-2">
+  <div class="text-center">
+    <div class="w-20 h-20 bg-gradient-to-br from-neutral-100 to-neutral-200 rounded-2xl flex items-center justify-center mx-auto 
+    mb-4 shadow-2xl group-hover:shadow-neutral-400/30 group-hover:scale-105 transition-all duration-300">
+      <svg class="w-12 h-12 text-neutral-900 drop-shadow-lg" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill="#0074BD" d="M47.617 98.12s-4.767 2.774 3.397 3.71c9.892 1.13 14.947.968 25.845-1.092 0 0 2.871 1.795 6.873 3.351-24.439 10.47-55.308-.607-36.115-5.969zm-2.988-13.665s-5.348 3.959 2.823 4.805c10.567 1.091 18.91 1.18 33.354-1.6 0 0 1.993 2.025 5.132 3.131-29.542 8.64-62.446.68-41.309-6.336z"/>
+        <path fill="#EA2D2E" d="M69.802 61.271c6.025 6.935-1.58 13.17-1.58 13.17s15.289-7.891 8.269-17.777c-6.559-9.215-11.587-13.792 15.635-29.58 0 .001-42.731 10.67-22.324 34.187z"/>
+        <path fill="#0074BD" d="M102.123 108.229s3.529 2.91-3.888 5.159c-14.102 4.272-58.706 5.56-71.094.171-4.451-1.938 3.899-4.625 6.526-5.192 2.739-.593 4.303-.485 4.303-.485-4.953-3.487-32.013 6.85-13.743 9.815 49.821 8.076 90.817-3.637 77.896-9.468zM49.912 70.294s-22.686 5.389-8.033 7.348c6.188.828 18.518.638 30.011-.326 9.39-.789 18.813-2.474 18.813-2.474s-3.308 1.419-5.704 3.053c-23.042 6.061-67.544 3.238-54.731-2.958 10.832-5.239 19.644-4.643 19.644-4.643zm40.697 22.747c23.421-12.167 12.591-23.86 5.032-22.285-1.848.385-2.677.72-2.677.72s.688-1.079 2-1.543c14.953-5.255 26.451 15.503-4.823 23.725 0-.002.359-.327.468-.617z"/>
+        <path fill="#EA2D2E" d="M76.491 1.587S89.459 14.563 64.188 34.51c-20.266 16.006-4.621 25.13-.007 35.559-11.831-10.673-20.509-20.07-14.688-28.815C58.041 28.42 81.722 22.195 76.491 1.587z"/>
+        <path fill="#0074BD" d="M52.214 126.021c22.476 1.437 57-.8 57.817-11.436 0 0-1.571 4.032-18.577 7.231-19.186 3.612-42.854 3.191-56.887.874 0 .001 2.875 2.381 17.647 3.331z"/>
+      </svg>
+    </div>
+    <h4 class="text-lg font-bold text-neutral-100 mb-2">Java</h4>
+    <p class="text-neutral-400 text-sm">POO, Herança</p>
+  </div>
+</div>
+      <!-- Git / GitHub -->
+<div class="group p-8 rounded-2xl bg-neutral-900/50 backdrop-blur-xl border border-neutral-800 hover:border-neutral-700 hover:bg-neutral-900/80 transition-all duration-300 hover:-translate-y-2">
+  <div class="text-center">
+    <div class="w-20 h-20 bg-gradient-to-br from-neutral-800 to-neutral-950 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-2xl group-hover:shadow-neutral-400/20 group-hover:scale-105 transition-all duration-300">
+      <svg
+        class="w-10 h-10 text-white"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="currentColor"
+        aria-label="GitHub"
+        role="img"
+      >
+        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.176 2.873.087 3.176.769.84 1.236 1.911 1.236 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.565 21.798 24 17.3 24 12 24 5.373 18.627 0 12 0z"/>
+      </svg>
+    </div>
+    <h4 class="text-lg font-bold text-neutral-100 mb-2">Git/GitHub</h4>
+    <p class="text-neutral-400 text-sm">Versionamento</p>
+  </div>
+</div>
+
+<!-- HTML (usando o SVG enviado) -->
+<div class="group p-8 rounded-2xl bg-neutral-900/50 backdrop-blur-xl border border-neutral-800 hover:border-neutral-700 hover:bg-neutral-900/80 transition-all duration-300 hover:-translate-y-2">
+  <div class="text-center">
+    <div class="w-20 h-20 bg-gradient-to-br from-orange-700 to-orange-900 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-2xl group-hover:shadow-orange-400/30 group-hover:scale-105 transition-all duration-300">
+      <svg
+        class="w-12 h-12"
+        viewBox="0 0 128 128"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-label="HTML5"
+        role="img"
+      >
+        <path fill="#E44D26" d="M19.037 113.876L9.032 1.661h109.936l-10.016 112.198-45.019 12.48z"></path>
+        <path fill="#F16529" d="M64 116.8l36.378-10.086 8.559-95.878H64z"></path>
+        <path fill="#EBEBEB" d="M64 52.455H45.788L44.53 38.361H64V24.599H29.489l.33 3.692 3.382 37.927H64zm0 35.743l-.061.017-15.327-4.14-.979-10.975H33.816l1.928 21.609 28.193 7.826.063-.017z"></path>
+        <path fill="#fff" d="M63.952 52.455v13.763h16.947l-1.597 17.849-15.35 4.143v14.319l28.215-7.82.207-2.325 3.234-36.233.335-3.696h-3.708zm0-27.856v13.762h33.244l.276-3.092.628-6.978.329-3.692z"></path>
+      </svg>
+    </div>
+
+    <h4 class="text-lg font-bold text-neutral-100 mb-2">HTML</h4>
+    <p class="text-neutral-400 text-sm">Front-end, Design</p>
+  </div>
+</div>
+
+
+    </div>
+    <div class="max-w-4xl mx-auto">
+        <div class="group flex gap-4 p-5 rounded-lg">
+      <div class="flex-1">
+        <h5 class="text-lg font-semibold text-neutral-100 mb-2 group-hover:text-neutral-50 transition-colors duration-250">
+          Outros</h5>
+        <ul class="text-neutral-400 text-lg space-y-1.5">
+          <li>• Lógica de programação</li>
+          <li>• HTML/CSS/JS</li
+          <li>• Proeficiência em IA generativa</li>
+          <li>• Pacote Office</li>
+          <li>• Inglês avançado</li
+        </ul>
       </div>
     </div>
-    
-    <!-- PROGRESS BARS (opcional) -->
-    <div class="max-w-4xl mx-auto">
+  </div>
+<!-- PROGRESS BARS -->
+    <div class="mt-8 max-w-4xl mx-auto p-12">
+      <h3 class="flex justify-center text-neutral-300 font-semibold tracking-wide uppercase text-lg mb-12 border-b border-neutral-800 
+      pb-4 inline-block group-hover:border-neutral-600 transition-colors duration-500">
+        Progresso de Habilidades Técnicas
+      </h3>
       <div class="space-y-6">
         <div>
           <div class="flex justify-between mb-2">
-            <span class="text-neutral-300 font-semibold">Java/Spring</span>
-            <span class="text-neutral-400 text-sm">Avançado</span>
+            <span class="text-neutral-300 font-semibold">Lógica de Programação</span>
+            <span class="text-neutral-400 text-sm">Intermediário</span>
           </div>
           <div class="w-full bg-neutral-800 rounded-full h-2">
-            <div class="bg-gradient-to-r from-yellow-400 to-yellow-500 h-2 rounded-full w-11/12 shadow-lg"></div>
+            <div class="bg-gradient-to-r from-neutral-400 to-neutral-500 h-2 rounded-full w-3/5 shadow-lg"></div>
+          </div>
+        </div>
+        <div>
+          <div class="flex justify-between mb-2">
+            <span class="text-neutral-300 font-semibold">Java</span>
+            <span class="text-neutral-400 text-sm">Intermediário</span>
+          </div>
+          <div class="w-full bg-neutral-800 rounded-full h-2">
+            <div class="bg-gradient-to-r from-orange-400 to-orange-900 h-2 rounded-full w-1/2 shadow-lg"></div>
+          </div>
+        </div>
+        <div>
+          <div class="flex justify-between mb-2">
+            <span class="text-neutral-300 font-semibold">C++</span>
+            <span class="text-neutral-400 text-sm">Intermediário</span>
+          </div>
+          <div class="w-full bg-neutral-800 rounded-full h-2">
+            <div class="bg-gradient-to-r from-purple-400 to-purple-900 h-2 rounded-full w-2/5 shadow-lg"></div>
           </div>
         </div>
         <div>
           <div class="flex justify-between mb-2">
             <span class="text-neutral-300 font-semibold">PostgreSQL</span>
+            <span class="text-neutral-400 text-sm">Básico</span>
+          </div>
+          <div class="w-full bg-neutral-800 rounded-full h-2">
+            <div class="bg-gradient-to-r from-indigo-500 to-indigo-900 h-2 rounded-full w-1/4 shadow-lg"></div>
+          </div>
+        </div>
+        <div class="flex justify-between mb-2">
+            <span class="text-neutral-300 font-semibold">Git/Github</span>
+            <span class="text-neutral-400 text-sm">Intermediário</span>
+          </div>
+          <div class="w-full bg-neutral-800 rounded-full h-2">
+            <div class="bg-gradient-to-r from-green-400 to-green-900 h-2 rounded-full w-6/12 shadow-lg">
+          </div>
+        </div>
+        <div>
+          <div class="flex justify-between mb-2">
+            <span class="text-neutral-300 font-semibold">Inglês</span>
             <span class="text-neutral-400 text-sm">Avançado</span>
           </div>
           <div class="w-full bg-neutral-800 rounded-full h-2">
-            <div class="bg-gradient-to-r from-blue-500 to-blue-600 h-2 rounded-full w-10/12 shadow-lg"></div>
+            <div class="bg-gradient-to-r from-sky-400 to-sky-900 h-2 rounded-full w-9/12 shadow-lg"></div>
           </div>
         </div>
       </div>
     </div>
   </div>
+
+  <!-- SOFT SKILLS - ANIMAÇÕES RÁPIDAS E PROFISSIONAIS -->
+<div class="mt-16 max-w-4xl mx-auto">
+  <h3 class=" text-neutral-300 font-semibold tracking-wide uppercase text-2xl mb-12 pb-2 border-b-2 border-neutral-800 
+  inline-block hover:border-neutral-500/50 transition-all duration-300 hover:scale-105">
+    Soft Skills
+  </h3>
+  
+  <div class="space-y-6">
+    
+    <!-- COMUNICAÇÃO -->
+<div class="group flex items-start gap-4 p-5 rounded-lg border border-neutral-800/40 bg-neutral-900/20 hover:bg-neutral-900/50 hover:border-neutral-600/70 hover:shadow-md hover:shadow-neutral-700/30 transition-all duration-250">
+  <div class="w-10 h-10 bg-neutral-800 rounded-md flex items-center justify-center flex-shrink-0 opacity-75 group-hover:opacity-100 group-hover:bg-neutral-700 transition-all duration-250">
+    <span class="text-base">💬</span>
+  </div>
+  <div class="flex-1">
+    <h5 class="text-lg font-semibold text-neutral-100 mb-2 group-hover:text-neutral-50 transition-colors duration-250">Comunicação Clara</h5>
+    <ul class="text-neutral-400 text-sm space-y-1.5">
+      <li>• Explico código para não-técnicos</li>
+      <li>• Adapto linguagem ao público</li>
+      <li>• Alinho expectativas do time</li>
+    </ul>
+  </div>
+</div>
+
+<!-- TRABALHO EM EQUIPE -->
+<div class="group flex items-start gap-4 p-5 rounded-lg border border-neutral-800/40 bg-neutral-900/20 hover:bg-neutral-900/50 hover:border-neutral-600/70 hover:shadow-md hover:shadow-neutral-700/30 transition-all duration-250">
+  <div class="w-10 h-10 bg-neutral-800 rounded-md flex items-center justify-center flex-shrink-0 opacity-75 group-hover:opacity-100 group-hover:bg-neutral-700 transition-all duration-250">
+    <span class="text-base">👥</span>
+  </div>
+  <div class="flex-1">
+    <h5 class="text-lg font-semibold text-neutral-100 mb-2 group-hover:text-neutral-50 transition-colors duration-250">Trabalho em Equipe</h5>
+    <ul class="text-neutral-400 text-sm space-y-1.5">
+      <li>• Participo de code reviews</li>
+      <li>• Colaboração em projetos acadêmicos</li>
+      <li>• Divido tarefas em sprints</li>
+    </ul>
+  </div>
+</div>
+
+<!-- RESOLUÇÃO DE PROBLEMAS -->
+<div class="group flex items-start gap-4 p-5 rounded-lg border border-neutral-800/40 bg-neutral-900/20 hover:bg-neutral-900/50 hover:border-neutral-600/70 hover:shadow-md hover:shadow-neutral-700/30 transition-all duration-250">
+  <div class="w-10 h-10 bg-neutral-800 rounded-md flex items-center justify-center flex-shrink-0 opacity-75 group-hover:opacity-100 group-hover:bg-neutral-700 transition-all duration-250">
+    <span class="text-base">🧠</span>
+  </div>
+  <div class="flex-1">
+    <h5 class="text-lg font-semibold text-neutral-100 mb-2 group-hover:text-neutral-50 transition-colors duration-250">Resolução de Problemas</h5>
+    <ul class="text-neutral-400 text-sm space-y-1.5">
+      <li>• Identifico raiz dos bugs rapidamente</li>
+      <li>• Testo hipóteses sistematicamente</li>
+      <li>• Proponho soluções escaláveis</li>
+    </ul>
+  </div>
+</div>
+  </div>
+</div>
 </section>
-<!-- SEÇÃO PROJETOS - OVERLAP PERFEITO -->
-<section id="projetos" class="w-full -mt-20 pt-32 pb-32 relative">
+
+<!-- SEÇÃO PROJETOS  -->
+<section name="secao-projetos" id="projetos" class="w-full -mt-20 pt-32 pb-32 relative">
   <!-- BACKGROUND GRADIENT SUAVE -->
   <div class="absolute inset-0 bg-gradient-to-b from-neutral-950/100 to-neutral-950/60 z-0"></div>
   
@@ -233,7 +393,7 @@
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       
       <!-- PROJETO 1 - COUNTRY SEARCH -->
-<div class="group bg-neutral-900/80 backdrop-blur-xl p-8 rounded-3xl border border-neutral-700/50 
+<div name="projeto-1" class="group bg-neutral-900/80 backdrop-blur-xl p-8 rounded-3xl border border-neutral-700/50 
             hover:border-neutral-600/50 hover:bg-neutral-900/95 transition-all duration-500 
             hover:-translate-y-2 hover:shadow-2xl hover:shadow-neutral-800/40">
   
@@ -291,7 +451,7 @@
   </div>
 </div>
       <!-- PROJETO 2 - SQL TRABALHO BD -->
-<div class="group bg-neutral-900/80 backdrop-blur-xl p-8 rounded-3xl border border-neutral-700/50 
+<div name="projeto-2" class="group bg-neutral-900/80 backdrop-blur-xl p-8 rounded-3xl border border-neutral-700/50 
             hover:border-neutral-600/50 hover:bg-neutral-900/95 transition-all duration-500 
             hover:-translate-y-2 hover:shadow-2xl hover:shadow-neutral-800/40">
   
@@ -352,7 +512,7 @@
 </div>
 
 <!-- PROJETO 3 - ESQUEMA POO G20 -->
-<div class="group bg-neutral-900/80 backdrop-blur-xl p-8 rounded-3xl border border-neutral-700/50 
+<div name="projeto-3" class="group bg-neutral-900/80 backdrop-blur-xl p-8 rounded-3xl border border-neutral-700/50 
             hover:border-neutral-600/50 hover:bg-neutral-900/95 transition-all duration-500 
             hover:-translate-y-2 hover:shadow-2xl hover:shadow-neutral-800/40">
   
@@ -411,67 +571,147 @@
     </div>
   </div>
 </section>
-<!-- SEÇÃO CONTATO -->
-<section id="contato" class="w-full py-32 bg-neutral-950/90 border-t border-neutral-800 -mt-12 pt-48 relative">
-  <div class="max-w-4xl mx-auto px-4">
-    
-    <!-- TÍTULO -->
-    <div class="text-center mb-24">
-      <h2 class="text-4xl lg:text-6xl font-black bg-gradient-to-r from-neutral-50 via-neutral-100 to-neutral-200 bg-clip-text text-transparent">
-        Contato
+<!-- SEÇÃO CONTATO (mais profissional e chamativa) -->
+<section
+  name="secao-contato"
+  id="contato"
+  class="relative w-full py-32 bg-neutral-950/90 -mt-12 pt-48 overflow-hidden
+         border-t border-neutral-800/60
+         before:pointer-events-none before:absolute before:inset-x-0 before:top-0 before:h-24
+         before:bg-gradient-to-b before:from-transparent before:via-neutral-950/60 before:to-neutral-950/90"
+>
+  <!-- Glow de fundo (leve) -->
+  <div aria-hidden="true" class="pointer-events-none absolute inset-0">
+    <div class="absolute -top-40 left-1/2 h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-gradient-to-br from-neutral-200/10 via-purple-500/10 to-blue-500/10 blur-3xl"></div>
+    <div class="absolute -bottom-40 right-[-120px] h-[420px] w-[420px] rounded-full bg-gradient-to-br from-rose-500/10 via-violet-500/10 to-transparent blur-3xl"></div>
+  </div>
+
+  <div class="relative max-w-4xl mx-auto px-4">
+    <!-- TÍTULO + BADGE -->
+    <div class="text-center mb-20">
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-neutral-800 bg-neutral-900/40 text-neutral-300 text-sm font-semibold tracking-wide">
+        <span class="h-2 w-2 rounded-full bg-emerald-400"></span>
+        Disponível para oportunidades
+      </div>
+
+      <h2 class="mt-6 text-4xl lg:text-6xl font-black bg-gradient-to-r from-neutral-50 via-neutral-100 to-neutral-200 bg-clip-text text-transparent">
+        Vamos conversar!
       </h2>
+
       <p class="text-xl text-neutral-400 mt-6 max-w-2xl mx-auto">
-        Vamos trabalhar juntos nos seus projetos
+        Me chame por LinkedIn, veja meus projetos no GitHub ou envie um e-mail direto.
       </p>
-    </div>
-    
-    <!-- CARDS DE CONTATO -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      
-      <!-- LINKEDIN -->
-      <a href="https://linkedin.com/in/seu-perfil" target="_blank" class="group p-8 rounded-3xl bg-neutral-900/70 backdrop-blur-xl 
-                 border border-neutral-800 hover:border-neutral-700 hover:bg-neutral-900/90 transition-all duration-300 
-                 hover:-translate-y-2 hover:shadow-2xl hover:shadow-neutral-800/50 text-center">
-        <div class="w-16 h-16 bg-[#0A66C2] rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-2xl">
-          <svg class="w-8 h-8" fill="white" viewBox="0 0 24 24">
-            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+
+      <!-- CTA rápido -->
+      <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
+        <a
+          href="mailto:seu.email@gmail.com?subject=Contato%20Portfolio"
+          class="group inline-flex items-center justify-center gap-2 px-6 py-3 rounded-2xl bg-neutral-50 text-neutral-950 font-bold shadow-2xl hover:bg-neutral-100 transition-all duration-300 hover:-translate-y-[1px]"
+        >
+          Enviar e-mail
+          <svg class="mt-0.5 w-5 h-5 transition-transform group-hover:translate-x-0.5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M14 3l7 7-7 7v-4H3v-6h11V3z"/>
           </svg>
-        </div>
-        <h4 class="text-xl font-bold text-neutral-100 mb-2 group-hover:text-neutral-50">LinkedIn</h4>
-        <p class="text-neutral-400 text-sm">Perfil profissional</p>
-      </a>
-      
-      <!-- GITHUB -->
-      <a href="https://github.com/lucas-souuza" target="_blank" class="group p-8 rounded-3xl bg-neutral-900/70 backdrop-blur-xl 
-                 border border-neutral-800 hover:border-neutral-700 hover:bg-neutral-900/90 transition-all duration-300 
-                 hover:-translate-y-2 hover:shadow-2xl hover:shadow-neutral-800/50 text-center">
-        <div class="w-16 h-16 bg-[#1f2328] rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-2xl">
-          <svg class="w-8 h-8" fill="white" viewBox="0 0 24 24">
+        </a>
+        <a
+          href="https://github.com/lucas-souuza"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-2xl border border-neutral-700/80 bg-neutral-900/40 text-neutral-200 font-semibold hover:bg-neutral-900/70 hover:border-neutral-600 transition-all duration-300"
+        >
+          Ver GitHub
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
             <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.058-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.176 2.873.171 3.176.768.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
           </svg>
+        </a>
+      </div>
+    </div>
+    <div class="my-8 h-px w-full bg-gradient-to-r from-transparent via-neutral-700/60 to-transparent"></div>
+
+    <!-- CARDS (borda “premium” + hover) -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- LINKEDIN -->
+      <a
+        href="https://linkedin.com/in/seu-perfil"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="group relative p-[1px] rounded-3xl bg-gradient-to-br from-neutral-700/70 via-neutral-800/30 to-neutral-700/70 hover:from-blue-500/60 hover:via-neutral-700/20 hover:to-purple-500/60 transition-all duration-300"
+      >
+        <div class="rounded-3xl bg-neutral-900/70 backdrop-blur-xl p-8 border border-neutral-800/60 hover:border-neutral-700/60 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-neutral-800/50 text-center">
+          <div class="w-16 h-16 bg-[#0A66C2] rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-2xl">
+            <svg class="w-8 h-8" fill="white" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+          </div>
+
+          <h4 class="text-xl font-bold text-neutral-100 mb-2 group-hover:text-neutral-50 transition-colors">LinkedIn</h4>
+          <p class="text-neutral-400 text-sm mb-6">Perfil profissional</p>
+
+          <span class="inline-flex items-center gap-2 text-sm font-semibold text-neutral-200/90 group-hover:text-neutral-50 transition-colors">
+            Conectar
+            <svg class="mt-0.5 w-4 h-4 transition-transform group-hover:translate-x-0.5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M14 3l7 7-7 7v-4H3v-6h11V3z"/>
+            </svg>
+          </span>
         </div>
-        <h4 class="text-xl font-bold text-neutral-100 mb-2 group-hover:text-neutral-50">GitHub</h4>
-        <p class="text-neutral-400 text-sm">Código fonte</p>
       </a>
-      
-      <!-- GMAIL -->
-      <a href="mailto:seu.email@gmail.com?subject=Contato%20Portfolio" class="group p-8 rounded-3xl bg-neutral-900/70 backdrop-blur-xl 
-                 border border-neutral-800 hover:border-neutral-700 hover:bg-neutral-900/90 transition-all duration-300 
-                 hover:-translate-y-2 hover:shadow-2xl hover:shadow-neutral-800/50 text-center">
-        <div class="w-16 h-16 bg-gradient-to-br from-red-900 to-red-700 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-2xl">
-          <svg class="w-8 h-8" fill="white" viewBox="0 0 24 24">
-            <path d="M2 6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6zm3.519 0L12 11.671 18.481 6H5.52zM20 7.329l-7.341 6.424a1 1 0 0 1-1.318 0L4 7.329V18h16V7.329z"/>
-          </svg>
+
+      <!-- GITHUB -->
+      <a
+        href="https://github.com/lucas-souuza"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="group relative p-[1px] rounded-3xl bg-gradient-to-br from-neutral-700/70 via-neutral-800/30 to-neutral-700/70 hover:from-neutral-300/40 hover:via-neutral-700/20 hover:to-neutral-500/40 transition-all duration-300"
+      >
+        <div class="rounded-3xl bg-neutral-900/70 backdrop-blur-xl p-8 border border-neutral-800/60 hover:border-neutral-700/60 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-neutral-800/50 text-center">
+          <div class="w-16 h-16 bg-[#1f2328] rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-2xl">
+            <svg class="w-8 h-8" fill="white" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.058-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.176 2.873.171 3.176.768.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+            </svg>
+          </div>
+
+          <h4 class="text-xl font-bold text-neutral-100 mb-2 group-hover:text-neutral-50 transition-colors">GitHub</h4>
+          <p class="text-neutral-400 text-sm mb-6">Repositórios e projetos</p>
+
+          <span class="inline-flex items-center gap-2 text-sm font-semibold text-neutral-200/90 group-hover:text-neutral-50 transition-colors">
+            Ver projetos
+            <svg class="mt-0.5 w-4 h-4 transition-transform group-hover:translate-x-0.5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M14 3l7 7-7 7v-4H3v-6h11V3z"/>
+            </svg>
+          </span>
         </div>
-        <h4 class="text-xl font-bold text-neutral-100 mb-2 group-hover:text-neutral-50">Gmail</h4>
-        <p class="text-neutral-400 text-sm">seu.email@gmail.com</p>
+      </a>
+
+      <!-- EMAIL -->
+      <a
+        href="mailto:seu.email@gmail.com?subject=Contato%20Portfolio"
+        class="group relative p-[1px] rounded-3xl bg-gradient-to-br from-neutral-700/70 via-neutral-800/30 to-neutral-700/70 hover:from-rose-500/60 hover:via-neutral-700/20 hover:to-orange-500/60 transition-all duration-300"
+      >
+        <div class="rounded-3xl bg-neutral-900/70 backdrop-blur-xl p-8 border border-neutral-800/60 hover:border-neutral-700/60 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-neutral-800/50 text-center">
+          <div class="w-16 h-16 bg-gradient-to-br from-red-900 to-red-700 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-2xl">
+            <svg class="w-8 h-8" fill="white" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M2 6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6zm3.519 0L12 11.671 18.481 6H5.52zM20 7.329l-7.341 6.424a1 1 0 0 1-1.318 0L4 7.329V18h16V7.329z"/>
+            </svg>
+          </div>
+
+          <h4 class="text-xl font-bold text-neutral-100 mb-2 group-hover:text-neutral-50 transition-colors">E-mail</h4>
+          <p class="text-neutral-400 text-sm mb-6">seu.email@gmail.com</p>
+
+          <span class="inline-flex items-center gap-2 text-sm font-semibold text-neutral-200/90 group-hover:text-neutral-50 transition-colors">
+            Enviar mensagem
+            <svg class="mt-0.5 w-4 h-4 transition-transform group-hover:translate-x-0.5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M14 3l7 7-7 7v-4H3v-6h11V3z"/>
+            </svg>
+          </span>
+        </div>
       </a>
     </div>
   </div>
 </section>
 
-<!-- RODAPÉ PROFISSIONAL -->
-<footer class="w-full py-16 bg-gradient-to-b from-neutral-950 to-neutral-960 border-t border-neutral-900/50">
+
+<!-- RODAPÉ -->
+<footer name="rodape" class="w-full py-16 bg-gradient-to-b from-neutral-950 to-neutral-960 border-t border-neutral-900/50">
   <div class="max-w-6xl mx-auto px-6">
     
     <!-- TOPO - LOGO + NAV -->
@@ -567,8 +807,9 @@
       </div>
     </div>
   </div>
+  <p class="text-center italic text-neutral-500 text-sm mt-12">
+      Always God first.
+    </p>
 </footer>
-
-
 </body>
 </html>
