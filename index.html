@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Seu Nome - Desenvolvedor</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./assets/tailwind.css">
 </head>
 <body class="m-0 p-0 min-h-screen 
      bg-gradient-to-br from-neutral-950 via-neutral-950/95 to-neutral-900 
@@ -25,9 +25,14 @@
   </div>
   
   <!-- SIDEBAR -->
-  <div name="sidebar" class="bg-neutral-900/80 backdrop-blur-xl p-8 rounded-2xl shadow-2xl border border-neutral-700/50">
-    <div class="w-24 h-24 bg-neutral-50 rounded-full mb-6 flex items-center justify-center shadow-2xl border-4 border-neutral-800">
-      <span class="text-2xl font-bold text-neutral-950">SM</span>
+  <div name="sidebar" class="bg-neutral-900/80 backdrop-blur-xl p-12 rounded-2xl shadow-2xl border border-neutral-700/50">
+    <div class="w-24 h-24 bg-neutral-50 rounded-full mb-6 flex items-center justify-center shadow-2xl border-4 border-neutral-800 overflow-hidden">
+        <img
+      src="./assets/foto_perfil.jpg"
+      alt="Foto de perfil"
+      class="w-full h-full object-cover rounded-full"
+      loading="lazy"
+    />
     </div>
     <h2 class="text-2xl font-bold mb-4 text-neutral-50">Sobre mim</h2>
     <ul class="text-neutral-400 space-y-2 mb-8 text-sm">
@@ -38,7 +43,7 @@
     </ul>
     <div name="contatos-sidebar" class="flex gap-3 pt-4 border-t border-neutral-700">
       <!-- GITHUB -->
-      <a href="https://github.com/seuusuario" target="_blank"
+      <a href="https://github.com/seuusuario" target="_blank" rel="noopener noreferrer"
          class="group w-14 h-14 bg-neutral-800/50 hover:bg-neutral-700 rounded-xl
           flex items-center justify-center transition-all duration-300 hover:scale-110 shadow-xl hover:shadow-neutral-400/30">
         <svg class="w-7 h-7 text-neutral-300 group-hover:text-neutral-100" fill="currentColor" viewBox="0 0 24 24">
@@ -47,68 +52,123 @@
       </a>
       
       <!-- LINKEDIN -->
-      <a href="https://linkedin.com/in/seu-perfil" target="_blank"
-         class="group w-14 h-14 bg-neutral-800/50 hover:bg-neutral-700 rounded-xl 
+      <a href="https://linkedin.com/in/seu-perfil" target="_blank" rel="noopener noreferrer"
+         class="group w-14 h-14 bg-neutral-800/50 hover:bg-neutral-700 rounded-xl  
          flex items-center justify-center transition-all duration-300 hover:scale-110 shadow-xl hover:shadow-neutral-400/30">
         <svg class="w-7 h-7 text-neutral-300 group-hover:text-neutral-100" fill="currentColor" viewBox="0 0 24 24">
           <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
         </svg>
       </a>
       <!-- EMAIL -->
-    <a href="mailto:seu.email@gmail.com?subject=Contato%20-%20Portfólio" target="_blank"
+    <a href="mailto:seu.email@gmail.com?subject=Contato%20-%20Portfólio" target="_blank" rel="noopener noreferrer"
        class="group w-14 h-14 bg-neutral-800/50 hover:bg-neutral-700 rounded-xl
           flex items-center justify-center transition-all duration-300 hover:scale-110 shadow-xl hover:shadow-neutral-400/30">
       <svg class="w-7 h-7 text-neutral-300 group-hover:text-neutral-100" fill="currentColor" viewBox="0 0 24 24">
         <path d="M2 6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6zm3.519 0L12 11.671 18.481 6H5.52zM20 7.329l-7.341 6.424a1 1 0 0 1-1.318 0L4 7.329V18h16V7.329z"/>
       </svg>
     </a>
-
     </div>
   </div>
 
-  <!-- CONTEÚDO PRINCIPAL -->
-  <div name="conteudo-principal" class="shadow-2xl shadow-neutral-900/50 bg-neutral-900/60 backdrop-blur-xl p-12 rounded-3xl border border-neutral-700/50 flex flex-col justify-center gap-8">
-    <div>
-      <div class="inline-block bg-neutral-50/90 text-neutral-950 px-6 py-3 rounded-full mb-6 shadow-xl border border-neutral-700">
-        <span class="text-sm font-semibold tracking-wider">DESENVOLVEDOR FULLSTACK</span>
-      </div>
-      <h1 class="text-6xl md:text-7xl font-black mb-6 leading-tight">
-        <span class="bg-gradient-to-r from-neutral-50 via-neutral-100 to-neutral-200 bg-clip-text text-transparent">
-          LUCAS DE SOUZA
-        </span>
-      </h1>
-      <p class="text-xl text-neutral-400 mb-8 max-w-lg leading-relaxed">
-        Construindo soluções robustas com diversas tecnologias, algoritmos e paixão por código limpo.
-        Estudante UNIRIO em busca de desafios reais.
-      </p>
+<!-- CONTEÚDO PRINCIPAL (hero mais forte) -->
+<div name="conteudo-principal"
+  class="shadow-2xl shadow-neutral-900/50 bg-neutral-900/60 backdrop-blur-xl p-12 rounded-3xl border border-neutral-700/50 flex flex-col justify-center gap-8 relative overflow-hidden">
+
+  <!-- glow sutil -->
+  <div aria-hidden="true" class="pointer-events-none absolute -top-28 -right-24 h-[360px] w-[360px] rounded-full bg-gradient-to-br from-neutral-200/10 via-violet-500/10 to-sky-500/10 blur-3xl"></div>
+
+  <!-- Badge + status -->
+  <div class="flex flex-wrap items-center gap-3">
+    <div class="inline-block bg-neutral-50/90 text-neutral-950 px-6 py-3 rounded-full shadow-xl border border-neutral-700/60">
+      <span class="text-sm font-semibold tracking-wider">DESENVOLVEDOR FULLSTACK</span>
     </div>
-    <div name="botoes-principal" class="flex gap-4 pt-4 border-t border-neutral-700">
-      <a href="#projetos" class="scroll-mt-20 group relative overflow-hidden bg-neutral-50 text-neutral-950 
-      px-6 py-3 text-base sm:px-10 sm:py-4 sm:text-lg rounded-2xl font-bold text-lg shadow-2xl 
-      hover:shadow-neutral-400/50 hover:scale-[1.02] hover:bg-neutral-100 
-      active:scale-[0.97] active:shadow-xl transition-all duration-300 ease-out 
-      before:absolute before:inset-0 before:bg-neutral-200/0 before:animate-ping before:duration-[600ms] 
-      after:absolute after:inset-0 after:bg-gradient-to-r after:from-neutral-200/50 after:to-transparent 
-      after:opacity-0 after:translate-x-[-100%] group-hover:after:translate-x-[100%] group-hover:after:opacity-100 
-      after:transition-all after:duration-700 after:ease-out">
-  <span class="relative z-10 flex items-center justify-center gap-2 transition-all duration-300 group-hover:gap-3">
-    Ver Projetos
-  </span>
-</a>
-      <a href="#" class="group relative overflow-hidden border-2 border-neutral-600 text-neutral-300 
-   px-6 py-3 text-base sm:px-10 sm:py-4 sm:text-lg rounded-2xl font-bold text-lg 
-   hover:border-neutral-400 hover:text-neutral-100 hover:bg-neutral-900/30 
-   hover:shadow-xl hover:shadow-neutral-500/25 hover:scale-[1.02] 
-   active:scale-[0.97] active:shadow-lg transition-all duration-300 ease-out 
-   before:absolute before:inset-0 before:bg-neutral-400/20 before:scale-0 before:origin-center 
-   before:transition-transform before:duration-400 hover:before:scale-110 
-   after:absolute after:inset-0 after:bg-neutral-100/10 after:opacity-0 after:translate-x-[-100%] 
-   group-hover:after:translate-x-[100%] group-hover:after:opacity-100 
-   after:transition-all after:duration-600 after:ease-out">
-  <span class="relative z-10 transition-all duration-300 hover:scale-105">Download CV</span>
-</a>
+
+    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-neutral-800 bg-neutral-900/40 text-neutral-300 text-sm font-semibold">
+      <span class="h-2 w-2 rounded-full bg-emerald-400"></span>
+      Disponível para estágio / freelas
     </div>
   </div>
+
+  <!-- Título -->
+  <div>
+    <h1 class="text-6xl md:text-7xl font-black mb-6 leading-tight">
+      <span class="bg-gradient-to-r from-neutral-50 via-neutral-100 to-neutral-200 bg-clip-text text-transparent">
+        LUCAS DE SOUZA
+      </span>
+    </h1>
+
+    <p class="text-xl text-neutral-400 max-w-2xl leading-relaxed">
+      Desenvolvo soluções eficientes de ponta a ponta, unindo back-end em Java, banco de dados com SQL/PostgreSQL 
+      (modelagem e normalização até 3FN) e front-end responsivo com HTML/CSS/Tailwind e JavaScript moderno.
+      Sou graduando em Sistemas de Informação na UNIRIO, com inglês avançado e aprendizado rápido, em busca de projetos reais para 
+      gerar impacto e evoluir em equipe.
+    </p>
+  </div>
+
+  <!-- Chips de stack (rápido de ler) -->
+  <div class="flex flex-wrap gap-2">
+    <span class="px-3 py-1 rounded-full text-sm font-semibold bg-neutral-900/50 border border-neutral-800 text-neutral-300">Java</span>
+    <span class="px-3 py-1 rounded-full text-sm font-semibold bg-neutral-900/50 border border-neutral-800 text-neutral-300">PostgreSQL</span>
+    <span class="px-3 py-1 rounded-full text-sm font-semibold bg-neutral-900/50 border border-neutral-800 text-neutral-300">HTML/CSS</span>
+    <span class="px-3 py-1 rounded-full text-sm font-semibold bg-neutral-900/50 border border-neutral-800 text-neutral-300">JavaScript</span>
+    <span class="px-3 py-1 rounded-full text-sm font-semibold bg-neutral-900/50 border border-neutral-800 text-neutral-300">Git/GitHub</span>
+    <span class="px-3 py-1 rounded-full text-sm font-semibold bg-neutral-900/50 border border-neutral-800 text-neutral-300">Tailwind</span>
+  </div>
+
+  <!-- Highlights (credibilidade rápida) -->
+  <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+    <div class="rounded-2xl bg-neutral-900/40 border border-neutral-800 p-5">
+      <p class="text-neutral-400 text-xs font-semibold tracking-wider uppercase">Foco</p>
+      <p class="text-neutral-100 font-bold mt-2">Código limpo</p>
+      <p class="text-neutral-400 text-sm mt-1">Arquitetura, padrões e legibilidade.</p>
+    </div>
+    <div class="rounded-2xl bg-neutral-900/40 border border-neutral-800 p-5">
+      <p class="text-neutral-400 text-xs font-semibold tracking-wider uppercase">Prática</p>
+      <p class="text-neutral-100 font-bold mt-2">Projetos práticos</p>
+      <p class="text-neutral-400 text-sm mt-1">CRUD, SPA, APIs, modelagem SQL, UI.</p>
+    </div>
+    <div class="rounded-2xl bg-neutral-900/40 border border-neutral-800 p-5">
+      <p class="text-neutral-400 text-xs font-semibold tracking-wider uppercase">Diferencial</p>
+      <p class="text-neutral-100 font-bold mt-2">Eficiência</p>
+      <p class="text-neutral-400 text-sm mt-1">Complexidade e Performance.</p>
+    </div>
+  </div>
+
+  <!-- Botões -->
+  <div name="botoes-principal" class="flex flex-col sm:flex-row gap-4 pt-4 border-t border-neutral-700/60">
+    <a href="#projetos"
+      class="scroll-mt-20 group relative overflow-hidden bg-neutral-50 text-neutral-950 px-6 py-3 sm:px-10 sm:py-4 rounded-2xl font-bold shadow-2xl hover:shadow-neutral-400/50 hover:scale-[1.02] hover:bg-neutral-100 active:scale-[0.97] active:shadow-xl transition-all duration-300 ease-out">
+      <span class="relative z-10 flex items-center justify-center gap-2 transition-all duration-300 group-hover:gap-3">
+        Ver Projetos
+      </span>
+    </a>
+    <a
+      href=".assets/CV_Lucas_Martins_Estagio_TI.pdf"
+      download
+      class="group relative overflow-hidden border-2 border-neutral-600 text-neutral-200 px-6 py-3 sm:px-10 sm:py-4 rounded-2xl font-bold
+            hover:border-neutral-400 hover:text-neutral-100 hover:bg-neutral-900/30 hover:shadow-xl hover:shadow-neutral-500/25 hover:scale-[1.02]
+            active:scale-[0.97] active:shadow-lg transition-all duration-300 ease-out"
+    >
+      <span class="relative z-10 inline-flex items-center justify-center gap-2">
+        Download CV
+        <svg class="w-5 h-5 opacity-90 transition-transform group-hover:translate-y-0.5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12 3a1 1 0 011 1v9.586l3.293-3.293 1.414 1.414L12 17.414l-5.707-5.707 1.414-1.414L11 13.586V4a1 1 0 011-1z"></path>
+          <path d="M4 19a1 1 0 011-1h14a1 1 0 110 2H5a1 1 0 01-1-1z"></path>
+        </svg>
+      </span>
+    </a>
+    <a href="#contato"
+      class="group relative overflow-hidden border-2 border-neutral-600 text-neutral-200 px-6 py-3 sm:px-10 sm:py-4 rounded-2xl font-bold hover:border-neutral-400 hover:text-neutral-100 hover:bg-neutral-900/30 hover:shadow-xl hover:shadow-neutral-500/25 hover:scale-[1.02] active:scale-[0.97] active:shadow-lg transition-all duration-300 ease-out">
+      <span class="relative z-10 inline-flex items-center justify-center gap-2">
+        Falar comigo
+        <svg class="w-5 h-5 opacity-90 transition-transform group-hover:translate-x-0.5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 6h-2v6h6v-2h-4V8z"/>
+        </svg>
+      </span>
+    </a>
+  </div>
+</div>
+
 </div>
 <!-- SEÇÃO HABILIDADES -->
 <section name="secao-habilidades" id="habilidades" class="w-full py-32 bg-neutral-950/80 border-t border-neutral-800 -mt-12 pt-48 relative">
@@ -211,7 +271,7 @@
   </div>
 </div>
 
-<!-- HTML (usando o SVG enviado) -->
+<!-- HTML -->
 <div class="group p-8 rounded-2xl bg-neutral-900/50 backdrop-blur-xl border border-neutral-800 hover:border-neutral-700 hover:bg-neutral-900/80 transition-all duration-300 hover:-translate-y-2">
   <div class="text-center">
     <div class="w-20 h-20 bg-gradient-to-br from-orange-700 to-orange-900 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-2xl group-hover:shadow-orange-400/30 group-hover:scale-105 transition-all duration-300">
@@ -243,10 +303,9 @@
           Outros</h5>
         <ul class="text-neutral-400 text-lg space-y-1.5">
           <li>• Lógica de programação</li>
-          <li>• HTML/CSS/JS</li
-          <li>• Proeficiência em IA generativa</li>
+          <li>• HTML/CSS/JS</li>
           <li>• Pacote Office</li>
-          <li>• Inglês avançado</li
+          <li>• Inglês avançado</li>
         </ul>
       </div>
     </div>
@@ -332,9 +391,9 @@
   <div class="flex-1">
     <h5 class="text-lg font-semibold text-neutral-100 mb-2 group-hover:text-neutral-50 transition-colors duration-250">Comunicação Clara</h5>
     <ul class="text-neutral-400 text-sm space-y-1.5">
-      <li>• Explico código para não-técnicos</li>
-      <li>• Adapto linguagem ao público</li>
-      <li>• Alinho expectativas do time</li>
+      <li>• Traduzo requisitos em tarefas e checklist (issues/README) pra alinhar expectativa.</li>
+      <li>• Explico decisões técnicas (trade-offs) com exemplos simples e objetivos.</li>
+      <li>• Documentação curta e útil: como rodar, como testar e o que foi escolhido.</li>
     </ul>
   </div>
 </div>
@@ -347,9 +406,9 @@
   <div class="flex-1">
     <h5 class="text-lg font-semibold text-neutral-100 mb-2 group-hover:text-neutral-50 transition-colors duration-250">Trabalho em Equipe</h5>
     <ul class="text-neutral-400 text-sm space-y-1.5">
-      <li>• Participo de code reviews</li>
+      <li>• Uso Git/GitHub no fluxo do dia a dia.</li>
       <li>• Colaboração em projetos acadêmicos</li>
-      <li>• Divido tarefas em sprints</li>
+      <li>• Quebro entrega em etapas, priorizando impacto e prazo.</li>
     </ul>
   </div>
 </div>
@@ -362,9 +421,9 @@
   <div class="flex-1">
     <h5 class="text-lg font-semibold text-neutral-100 mb-2 group-hover:text-neutral-50 transition-colors duration-250">Resolução de Problemas</h5>
     <ul class="text-neutral-400 text-sm space-y-1.5">
-      <li>• Identifico raiz dos bugs rapidamente</li>
-      <li>• Testo hipóteses sistematicamente</li>
-      <li>• Proponho soluções escaláveis</li>
+      <li>• Investigo por hipótese: reproduzo, isolo causa e valido com testes/casos de borda.</li>
+      <li>• Otimizo com métrica: complexidade (ex. HashMap/O(1)) e consultas SQL sem redundância (3FN).</li>
+      <li>• Corrijo pensando em manutenção: solução simples, legível e escalável</li>
     </ul>
   </div>
 </div>
@@ -379,7 +438,7 @@
   
   <div class="max-w-6xl mx-auto px-4 relative z-20">
     
-    <!-- TÍTULO COM ESPAÇAMENTO PERFEITO -->
+    <!-- TÍTULO -->
     <div class="text-center mb-24 pt-8">
       <h2 class="text-4xl lg:text-6xl pb-4 font-black bg-gradient-to-r from-neutral-50 via-neutral-100 to-neutral-200 bg-clip-text text-transparent">
         Meus Projetos
@@ -562,7 +621,7 @@
       </svg>
       Código
     </a>
-    <a href="#" class="flex-1 border-2 border-neutral-600 text-neutral-300 px-6 py-3 rounded-xl font-semibold text-center 
+    <a class="flex-1 border-2 border-neutral-600 text-neutral-300 px-6 py-3 rounded-xl font-semibold text-center 
                        hover:border-neutral-400 hover:text-neutral-100 hover:bg-neutral-900/50 transition-all duration-300">
       UML
     </a>
@@ -575,7 +634,7 @@
 <section
   name="secao-contato"
   id="contato"
-  class="relative w-full py-32 bg-neutral-950/90 -mt-12 pt-48 overflow-hidden
+  class="relative w-full py-32 bg-neutral-950/90 -mt-12 pt-32 overflow-hidden
          border-t border-neutral-800/60
          before:pointer-events-none before:absolute before:inset-x-0 before:top-0 before:h-24
          before:bg-gradient-to-b before:from-transparent before:via-neutral-950/60 before:to-neutral-950/90"
@@ -602,7 +661,7 @@
         Me chame por LinkedIn, veja meus projetos no GitHub ou envie um e-mail direto.
       </p>
 
-      <!-- CTA rápido -->
+      <!-- CTA -->
       <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
         <a
           href="mailto:seu.email@gmail.com?subject=Contato%20Portfolio"
@@ -770,22 +829,25 @@
       <div>
 
   <h5 class="text-neutral-300 font-bold mb-6 uppercase tracking-wider text-sm">Entre em Contato</h5>
-  <form class="space-y-4" action="https://api.web3forms.com/submit" method="POST">
-  <input type="hidden" name="access_key" value="04ad53b3-a90e-41c8-ab12-660f57d150b2">
-  <input class="w-full bg-neutral-900/70 border border-neutral-800 rounded-xl px-5 py-4 
-                text-neutral-300 placeholder-neutral-600 focus:outline-none focus:border-neutral-700 
-                focus:ring-2 focus:ring-neutral-600/50 transition-all backdrop-blur-sm"
-                type="text" name="name" placeholder="Seu nome" required>
-  <input class="w-full bg-neutral-900/70 border border-neutral-800 rounded-xl px-5 py-4 
-                text-neutral-300 placeholder-neutral-600 focus:outline-none focus:border-neutral-700 
-                focus:ring-2 focus:ring-neutral-600/50 transition-all backdrop-blur-sm" type="email" name="email" placeholder="Seu email" required>
-  <textarea class="w-full bg-neutral-900/70 border border-neutral-800 rounded-xl px-5 py-4 
-                   text-neutral-300 placeholder-neutral-600 focus:outline-none focus:border-neutral-700 
-                   focus:ring-2 focus:ring-neutral-600/50 transition-all backdrop-blur-sm resize-none"name="message" 
-                   placeholder="Digite sua mensagem aqui."></textarea>
-  <button class="w-full bg-gradient-to-r from-neutral-700 to-neutral-600 hover:from-neutral-600 hover:to-neutral-500 
-                 px-6 py-3 rounded-xl font-semibold text-base shadow-xl hover:shadow-neutral-400/30 
-                 hover:-translate-y-px transition-all duration-300 backdrop-blur-sm border border-neutral-700/50"type="submit">Enviar</button>
+  <form id="contatoForm"  class="space-y-4" action="https://api.web3forms.com/submit" method="POST">
+    <input type="checkbox" name="botcheck" class="hidden" style="display:none;">
+    <input type="hidden" name="access_key" value="04ad53b3-a90e-41c8-ab12-660f57d150b2">
+    <input class="w-full bg-neutral-900/70 border border-neutral-800 rounded-xl px-5 py-4 
+                  text-neutral-300 placeholder-neutral-600 focus:outline-none focus:border-neutral-700 
+                  focus:ring-2 focus:ring-neutral-600/50 transition-all backdrop-blur-sm"
+                  type="text" name="name" placeholder="Seu nome" required>
+    <input class="w-full bg-neutral-900/70 border border-neutral-800 rounded-xl px-5 py-4 
+                  text-neutral-300 placeholder-neutral-600 focus:outline-none focus:border-neutral-700 
+                  focus:ring-2 focus:ring-neutral-600/50 transition-all backdrop-blur-sm" type="email" name="email" placeholder="Seu email" required>
+    <textarea class="w-full bg-neutral-900/70 border border-neutral-800 rounded-xl px-5 py-4 
+                    text-neutral-300 placeholder-neutral-600 focus:outline-none focus:border-neutral-700 
+                    focus:ring-2 focus:ring-neutral-600/50 transition-all backdrop-blur-sm resize-none"name="message" 
+                    placeholder="Digite sua mensagem aqui."></textarea>
+                    <div class="h-captcha" data-captcha="true"></div>
+    <button class="w-full bg-gradient-to-r from-neutral-700 to-neutral-600 hover:from-neutral-600 hover:to-neutral-500 
+                  px-6 py-3 rounded-xl font-semibold text-base shadow-xl hover:shadow-neutral-400/30 
+            hover:-translate-y-px transition-all duration-300 backdrop-blur-sm border border-neutral-700/50"type="submit">Enviar</button>
+            
 </form>
 
 
@@ -811,5 +873,19 @@
       Always God first.
     </p>
 </footer>
+<script src="https://web3forms.com/client/script.js" async defer></script>
+<script>
+  const form = document.getElementById('contatoForm');
+
+  form.addEventListener('submit', function (e) {
+    const tokenEl = form.querySelector('textarea[name="h-captcha-response"]');
+    const token = tokenEl ? tokenEl.value : '';
+
+    if (!token) {
+      e.preventDefault();
+      alert('Confirme o captcha antes de enviar.');
+    }
+  });
+</script>
 </body>
 </html>
